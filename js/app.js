@@ -39,4 +39,5 @@ $(document).ready(function () {
         $('#info3mob').toggleClass('active');
     })
 
+
 });
