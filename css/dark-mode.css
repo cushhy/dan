@@ -313,7 +313,7 @@ body {
 
 @media (max-width: 51.25em) {
   .sidebar__name {
-    display: none;
+    font-size: 1.5625rem;
   }
 }
 
