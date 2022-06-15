@@ -220,8 +220,7 @@ body {
   position: relative;
   font-family: Inter;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1D222C), to(#202A41));
-  background: linear-gradient(180deg, #1D222C 0%, #202A41 100%);
+  background: #E6E6E6;
 }
 
 @media (max-width: 51.25em) {
@@ -236,8 +235,7 @@ body {
   height: 100vh;
   padding-top: 2.8125em;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(#283042), to(#2F3D5C));
-  background: linear-gradient(180deg, #283042 0%, #2F3D5C 100%);
+  background: #666666;
 }
 
 @media (max-width: 51.25em) {
@@ -351,7 +349,7 @@ body {
 .sidebar__button a {
   width: 100%;
   padding: 1.9375em 4.875em;
-  background: #13497A;
+  background: #343434;
   border-radius: 10px;
   text-decoration: none;
   font-size: 1rem;
@@ -363,7 +361,7 @@ body {
 
 .sidebar__button a:hover {
   background-color: #fff;
-  color: #13497A;
+  color: #000;
 }
 
 .sidebar__button.where a {
@@ -388,7 +386,7 @@ body {
   position: absolute;
   z-index: 2;
   right: -55%;
-  background: #13497A;
+  background: #343434;
   border-radius: 10px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -412,7 +410,7 @@ body {
   left: -5%;
   top: 14%;
   z-index: 1;
-  background-color: #13497A;
+  background-color: #343434;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -447,8 +445,7 @@ body {
 
 @media (max-width: 51.25em) {
   .main {
-    background: -webkit-gradient(linear, left top, left bottom, from(#1D222C), to(#202A41));
-    background: linear-gradient(180deg, #1D222C 0%, #202A41 100%);
+    background: #E6E6E6;
   }
 }
 
@@ -493,7 +490,7 @@ body {
   margin: 1.25em 0.625em;
   position: relative;
   font-size: 1.5625rem;
-  color: #fff;
+  color: #343434;
 }
 
 .main__item span {
@@ -507,7 +504,7 @@ body {
   top: -3px;
   width: 2px;
   height: 24px;
-  background-color: #A6F4FF;
+  background-color: #000;
 }
 
 @media (max-width: 25em) {
@@ -517,4 +514,26 @@ body {
     text-align: center;
     font-size: 1.25rem;
   }
+}
+
+.change__theme {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+}
+
+.change__theme button {
+  padding: 0.625em 1.25em;
+  border: none;
+  background: rgba(32, 42, 65, 0.7);
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.change__theme button:hover {
+  background: #202a41;
 }
