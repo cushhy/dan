@@ -434,7 +434,7 @@ body {
     left: 45%;
     top: 85%;
     z-index: 1;
-    background-color: #13497A;
+    background-color: #343434;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
