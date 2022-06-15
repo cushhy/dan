@@ -231,6 +231,19 @@ body {
   }
 }
 
+.sidebar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 2.8125em;
+}
+
 .sidebar {
   width: 417px;
   height: 100vh;
@@ -269,7 +282,15 @@ body {
   }
 }
 
+.sidebar__logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 1.5625em;
+}
+
 .sidebar__logo img {
+  width: 70px;
+  height: 70px;
   margin: 0 auto;
   margin-bottom: 2.8125em;
 }
@@ -283,7 +304,6 @@ body {
 }
 
 .sidebar__name {
-  margin-bottom: 2.8125em;
   font-size: 2rem;
   color: #fff;
   font-weight: 600;
@@ -490,23 +510,16 @@ body {
 
 .main__item {
   margin: 1.25em 0.625em;
+  padding: 0.3125em;
   position: relative;
   font-size: 1.5625rem;
   color: #343434;
+  border: 2px solid #343434;
+  border-radius: 3px;
 }
 
 .main__item span {
   font-weight: 700;
-}
-
-.main__item::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: -3px;
-  width: 2px;
-  height: 24px;
-  background-color: #000;
 }
 
 @media (max-width: 25em) {
@@ -538,4 +551,12 @@ body {
 
 .change__theme button:hover {
   background: #202a41;
+}
+
+.changeTheme[data-theme="dark"] {
+  display: block;
+}
+
+.changeTheme[data-theme="light"] {
+  display: none;
 }

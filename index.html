@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
 
-    <link rel="stylesheet" href="css/style.css" id="theme">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" title="theme" href="css/dark-mode.css">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
         rel="stylesheet" />
 
@@ -17,11 +18,13 @@
 
     <aside class="sidebar">
         <div class="sidebar__inner">
-            <div class="sidebar__logo">
-                <img src="assets/logo.png" alt="">
-            </div>
-            <div class="sidebar__name">
-                <h1>Название</h1>
+            <div class="sidebar__header">
+                <div class="sidebar__logo">
+                    <img src="assets/logo.png" alt="">
+                </div>
+                <div class="sidebar__name">
+                    <h1>Название</h1>
+                </div>
             </div>
             <div class="sidebar__time">
                 <h2>13:32</h2>
@@ -54,7 +57,8 @@
                 </div>
             </div>
             <div class="change__theme">
-                <button id="themeSwitch">Тёмная</button>
+                <button class="changeTheme" data-theme="light">Светлая</button>
+                <button class="changeTheme" data-theme="dark">Тёмная</button>
             </div>
         </div>
     </aside>
@@ -108,18 +112,27 @@
     </main>
 
     <script>
-        let switchMode = document.getElementById('themeSwitch');
-        let theme = document.getElementById('theme');
 
-        switchMode.onclick = function () {
+        const themeSwitchers = document.querySelectorAll('.changeTheme');
 
-            if (theme.getAttribute('href') == "css/light-mode.css") {
-                theme.href = "css/dark-mode.css";
-                document.getElementById("themeSwitch").innerHTML = "Светлая";
-            } else {
-                theme.href = 'css/light-mode.css'
-                document.getElementById("themeSwitch").innerHTML = "Тёмная";
-            }
+        themeSwitchers.forEach(switcher => {
+            switcher.addEventListener('click', function () {
+                applyTheme(this.dataset.theme);
+                localStorage.setItem('theme', this.dataset.theme);
+            })
+        })
+
+        function applyTheme(themeName) {
+            let themeUrl = `css/${themeName}-mode.css`;
+            document.querySelector('[title="theme"]').setAttribute('href', themeUrl);
+        }
+
+        let activeTheme = localStorage.getItem('theme');
+
+        if (activeTheme === null) {
+            applyTheme('light');
+        } else {
+            applyTheme(activeTheme);
         }
 
     </script>
