@@ -256,7 +256,6 @@ body {
   .sidebar {
     width: 100%;
     height: 100px;
-    position: absolute;
     top: 0;
     right: 0;
     padding: 0;
@@ -559,4 +558,20 @@ body {
 
 .changeTheme[data-theme="light"] {
   display: none;
+}
+
+.breadcrubms__item {
+  margin-right: 0.9375em;
+  -webkit-transform: skew(-10deg);
+  transform: skew(-10deg);
+  background: rgba(34, 34, 34, 0.5);
+}
+
+.breadcrubms__item h1 {
+  padding: 0.625em 0.9375em;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transform: skew(10deg);
+  transform: skew(10deg);
+  font-size: 0.8125rem;
 }
